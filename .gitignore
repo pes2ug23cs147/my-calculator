@@ -23,7 +23,7 @@ share/python-wheels/
 MANIFEST
 
 # Virtual environments
-SE_git_calci_venv
+SE_git_calci_venv/
 venv/
 env/
 ENV/
