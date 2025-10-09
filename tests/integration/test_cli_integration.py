@@ -2,10 +2,8 @@
 Integration Tests - CLI + Calculator Working Together
 """
 from click.testing import CliRunner
-import sys
-import pytest
-import os
 # Import the main click function from the CLI file
+from src.calculator import add, multiply, divide
 from src.CLI import calculate
 
 # Define the expected error message for clarity and reuse
@@ -17,7 +15,7 @@ class TestCLIIntegration:
 
     def run_cli(self, *args):
         """Invoke Click CLI in-process so coverage is measured."""
-        
+
         # --- FIX: Changed to use CliRunner().invoke() to prevent ModuleNotFoundError ---
         # This executes the CLI code in the same process, resolving import issues
         # and correctly allowing pytest-cov to measure coverage.
@@ -39,7 +37,7 @@ class TestCLIIntegration:
         # --- FIXED ASSERTION ---
         output_lines = res.output.strip().split('\n')
         assert output_lines[-1] == '28'
-        
+
         # Test checking for '15'
         res = self.run_cli("multiply", "5", "3")
         assert res.exit_code == 0
@@ -67,10 +65,10 @@ class TestCLIIntegration:
         """Test CLI can perform square root"""
         res = self.run_cli('sqrt', '16')
         assert res.exit_code == 0
-        
+
         # FIX: Check only the last line of stdout to ignore verbose output (from previous fix)
         output_lines = res.output.strip().split('\n')
-        assert output_lines[-1] == "4" 
+        assert output_lines[-1] == "4"
 
     def test_cli_error_handling_integration(self):
         """Test CLI properly handles calculator errors"""
@@ -94,7 +92,7 @@ class TestCLIIntegration:
         """Test CLI handles missing operand for subtraction gracefully"""
         res = self.run_cli("subtract", "5")
         assert res.exit_code == 1
-        
+
         # FIX: Asserts against the specific error message as required
         assert EXPECTED_SUBTRACT_ERROR in res.output.strip()
 
@@ -104,7 +102,6 @@ class TestCalculatorModuleIntegration:
 
     def test_chained_operations(self):
         """Test using results from one operation in another"""
-        from src.calculator import add, multiply, divide
 
         # Calculate (5 + 3) * 2 / 4
         step1 = add(5, 3)  # 8
