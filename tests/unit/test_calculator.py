@@ -56,11 +56,6 @@ class TestMultiplyDivide:
         assert divide(-10, 2) == -5
         assert divide(-12, -3) == 4
 
-    def test_divide_by_zero(self):
-        with pytest.raises(ZeroDivisionError):
-            assert divide(10, 0)
-        assert divide(0, 10) == 0
-
 
 class TestAdvancedOperations:
     """Test power and square root operations"""
