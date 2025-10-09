@@ -6,7 +6,7 @@ import sys
 import pytest
 import os
 # Import the main click function from the CLI file
-from src.cli import calculate
+from src.CLI import calculate
 
 # Define the expected error message for clarity and reuse
 EXPECTED_SUBTRACT_ERROR = "Error: Operation 'subtract' requires two numbers"
