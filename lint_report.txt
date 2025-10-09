@@ -1,11 +1,9 @@
 ************* Module src.CLI
-src/CLI.py:17:0: C0303: Trailing whitespace (trailing-whitespace)
-src/CLI.py:60:0: C0304: Final newline missing (missing-final-newline)
 src/CLI.py:1:0: C0103: Module name "CLI" doesn't conform to snake_case naming style (invalid-name)
 src/CLI.py:54:11: W0718: Catching too general exception Exception (broad-exception-caught)
 src/CLI.py:60:4: E1120: No value for argument 'operation' in function call (no-value-for-parameter)
 src/CLI.py:60:4: E1120: No value for argument 'num1' in function call (no-value-for-parameter)
 
 ------------------------------------------------------------------
-Your code has been rated at 7.41/10 (previous run: 5.68/10, +1.73)
+Your code has been rated at 7.78/10 (previous run: 7.41/10, +0.37)
 

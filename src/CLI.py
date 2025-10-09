@@ -14,7 +14,7 @@ from src.calculator import add, subtract, multiply, divide, power, square_root
 @click.argument("num2", type=float, required=False)
 def calculate(operation, num1, num2=None):
     """Simple calculator CLI"""
-    
+
     # List of operations that require a second number (binary operations)
     binary_operations = ["add", "subtract", "multiply", "divide", "power"]
 
