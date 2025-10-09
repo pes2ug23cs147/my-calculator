@@ -1,7 +1,17 @@
+************* Module src.CLI
+src/CLI.py:36:0: C0304: Final newline missing (missing-final-newline)
+src/CLI.py:1:0: C0103: Module name "CLI" doesn't conform to snake_case naming style (invalid-name)
+src/CLI.py:7:0: E0401: Unable to import 'calculator' (import-error)
+src/CLI.py:31:11: W0718: Catching too general exception Exception (broad-exception-caught)
+src/CLI.py:36:4: E1120: No value for argument 'operation' in function call (no-value-for-parameter)
+src/CLI.py:36:4: E1120: No value for argument 'num1' in function call (no-value-for-parameter)
+src/CLI.py:7:0: W0611: Unused multiply imported from calculator (unused-import)
+src/CLI.py:7:0: W0611: Unused divide imported from calculator (unused-import)
+src/CLI.py:7:0: W0611: Unused power imported from calculator (unused-import)
+src/CLI.py:7:0: W0611: Unused square_root imported from calculator (unused-import)
 ************* Module src.calculator
-src/calculator.py:34:0: C0304: Final newline missing (missing-final-newline)
-src/calculator.py:29:1: W0511: TODO: Students will add multiply, divide, power, sqrt functions (fixme)
+src/calculator.py:39:1: W0511: TODO: Students will add multiply, divide, power, sqrt functions (fixme)
 
 ------------------------------------------------------------------
-Your code has been rated at 8.89/10 (previous run: 8.89/10, +0.00)
+Your code has been rated at 4.25/10 (previous run: 4.25/10, +0.00)
 
