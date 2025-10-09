@@ -1,10 +1,7 @@
-"""
-Unit Tests for Calculator
-Students start with 2 passing tests, then add more
-"""
-
 import pytest
-from src.calculator import add, divide, subtract, multiply, power, square_root
+import sys
+import click
+from src.calculator import add, subtract, multiply, divide, power, square_root
 
 
 class TestBasicOperations:
@@ -91,6 +88,3 @@ class TestAdvancedOperations:
             ValueError, match="Cannot calculate square root of negative"
         ):
             square_root(-4)
-
-
-# TODO: Students will add TestMultiplyDivide class

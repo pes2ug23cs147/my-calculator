@@ -39,5 +39,6 @@ def calculate(operation, num1, num2=None):
         click.echo(f"Unexpected error: {e}")
         sys.exit(1)
 
+
 if __name__ == "__main__":
     calculate()
