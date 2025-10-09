@@ -4,7 +4,7 @@ Integration Tests - CLI + Calculator Working Together
 from click.testing import CliRunner
 # Import the main click function from the CLI file
 from src.calculator import add, multiply, divide, power, square_root
-from src.CLI import calculate
+from src.cli import calculate
 
 # Define the expected error message for clarity and reuse
 EXPECTED_SUBTRACT_ERROR = "Error: Operation 'subtract' requires two numbers"
