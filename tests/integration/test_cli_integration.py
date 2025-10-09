@@ -3,7 +3,7 @@ Integration Tests - CLI + Calculator Working Together
 """
 from click.testing import CliRunner
 # Import the main click function from the CLI file
-from src.calculator import add, multiply, divide
+from src.calculator import add, multiply, divide, power, square_root
 from src.CLI import calculate
 
 # Define the expected error message for clarity and reuse
@@ -112,7 +112,6 @@ class TestCalculatorModuleIntegration:
 
     def test_complex_calculation_integration(self):
         """Test complex calculation using multiple functions"""
-        from src.calculator import power, square_root, add
 
         # Calculate sqrt(3^2 + 4^2) = 5 (Pythagorean theorem)
         a_squared = power(3, 2)  # 9

@@ -1,6 +1,6 @@
-import pytest
 import sys
 import click
+import pytest
 from src.calculator import add, subtract, multiply, divide, power, square_root
 
 
