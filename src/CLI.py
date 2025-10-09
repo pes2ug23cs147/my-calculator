@@ -30,7 +30,7 @@ def calculate(operation, num1, num2=None):
         else:
             click.echo(f"Unknown operation: {operation}")
             sys.exit(1)
-
+        print(result)
     except ValueError as e:
         click.echo(f"Error: {e}")
         sys.exit(1)
